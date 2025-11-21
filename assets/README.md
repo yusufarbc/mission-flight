@@ -1,15 +1,14 @@
-Assets
-------
+# Assets
 
-This folder contains static assets used by the repository.
+Visual assets used across the project, docs, and the landing page.
 
-- `logo.png`: Team logo image (not included by default). You can generate a placeholder using `create_logo.py`.
-- `create_logo.py`: Small helper script that writes a tiny placeholder PNG to `logo.png`.
+## Highlights
 
-To create the placeholder logo (PowerShell):
+- `logo_team_anka.png` - IEEE BTU ANKA team logo.
+- Mission visuals: `mission_diagram.png`, `mission_planner_screenshot.png`, `mission_view_01.png`, `mission_view_02.png`, `mission_view_03.png`.
+- Media from the field: `flight_test.png`, `team_photo.jpg`, `presentation_slides.png`.
 
-```powershell
-python assets\create_logo.py
-```
+## Notes
 
-Replace `logo.png` with your real team logo file (same filename) when ready.
+- The Teknofest competition report lives in `docs/BTU_ANKA_Report_2022.pdf` (linked from the landing page).
+- Keep filenames as-is to avoid breaking references in documentation and `index.html`.

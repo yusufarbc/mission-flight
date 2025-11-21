@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mission-Flight | IEEE BTU ANKA UAV Team</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: rgba(16, 24, 40, 0.6);
+      --muted: #cfd8e3;
+      --accent: #ffb703;
+      --accent-2: #2dd4bf;
+      --text: #e2e8f0;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Space Grotesk', 'Inconsolata', sans-serif;
+      background: radial-gradient(120% 60% at 20% 20%, rgba(45, 212, 191, 0.08), transparent),
+                  radial-gradient(100% 55% at 80% 0%, rgba(255, 183, 3, 0.08), transparent),
+                  linear-gradient(135deg, #0b1224 0%, #0f172a 100%);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto 80px auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 16px;
+      z-index: 10;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      object-fit: contain;
+      border: 1px solid var(--border);
+      background: #0b1224;
+      padding: 6px;
+    }
+
+    .brand h1 {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+
+    .tag {
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    main {
+      margin-top: 32px;
+      display: grid;
+      gap: 28px;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 26px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(40% 40% at 80% 10%, rgba(45, 212, 191, 0.08), transparent);
+      pointer-events: none;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stat {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      display: grid;
+      gap: 6px;
+    }
+
+    .stat strong {
+      font-size: 18px;
+      color: var(--text);
+    }
+
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(120deg, var(--accent), #ff7645);
+      color: #0b1224;
+      font-weight: 700;
+      padding: 12px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 15px 30px rgba(255, 183, 3, 0.35);
+      transition: transform 160ms ease, box-shadow 160ms ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 32px rgba(255, 183, 3, 0.4);
+    }
+
+    code, pre {
+      font-family: 'Inconsolata', 'Space Grotesk', monospace;
+      background: rgba(0, 0, 0, 0.35);
+      color: var(--accent-2);
+      border-radius: 10px;
+    }
+
+    pre {
+      padding: 14px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      margin: 10px 0 6px 0;
+    }
+
+    ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .hero {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: center;
+    }
+
+    .hero-visual {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-visual .badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.82);
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-top: 14px;
+    }
+
+    .card {
+      padding: 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      display: grid;
+      gap: 8px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      letter-spacing: 0.2px;
+    }
+
+    .gallery {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .gallery figure {
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery figcaption {
+      padding: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .notice {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 720px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      body {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="brand">
+        <img src="assets/logo_team_anka.png" alt="BTU ANKA logo">
+        <div>
+          <h1>mission-flight</h1>
+          <div class="chip">IEEE BTU ANKA - Teknofest 2022</div>
+        </div>
+      </div>
+      <div class="tag">Fixed-wing UAV</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h2>Autonomous mission control with in-flight corrections</h2>
+          <p>Python-based flight stack built for the Teknofest International UAV Competition. The controller reads waypoint plans, activates onboard perception over the target area, estimates offset from a detected marker, and shifts the mission so payload release lands on target.</p>
+          <div class="cards">
+            <div class="stat">
+              <strong>Teknofest 2022</strong>
+              <span class="notice">International UAV Competition</span>
+            </div>
+            <div class="stat">
+              <strong>DroneKit + OpenCV</strong>
+              <span class="notice">Python 3.8+ flight stack</span>
+            </div>
+            <div class="stat">
+              <strong>Fixed-wing</strong>
+              <span class="notice">Mission Planner & ArduPilot tooling</span>
+            </div>
+          </div>
+          <div style="margin-top:16px; display:flex; gap:12px; flex-wrap: wrap;">
+            <a class="cta" href="docs/BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">Read competition report</a>
+            <div class="chip">Live waypoint updates - Color-based detection</div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="assets/mission_diagram.png" alt="Mission diagram from the ANKA flight plan">
+          <div class="badge">Mission plan snapshot</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Flight stack at a glance</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Controller</h3>
+            <p>`intuitive_shot_flight_algorithm/flight_controller.py` runs the live mission loop, syncs waypoints from Mission Planner, and edits them in-air after perception reports an offset.</p>
+          </div>
+          <div class="card">
+            <h3>Perception</h3>
+            <p>`perception.py` performs color-based detection around the target area, captures the best frame, and logs bounding boxes so the waypoint correction aligns with the actual marker.</p>
+          </div>
+          <div class="card">
+            <h3>Logging</h3>
+            <p>`flight_logger.py` and `runtime_log.txt` keep a detailed trace of flight events and detection results for post-flight review.</p>
+          </div>
+          <div class="card">
+            <h3>Algorithms lab</h3>
+            <p>`algorithms/` houses standalone experiments (Canny, pixel deviation, demos) so detection ideas can be validated without touching flight-critical code.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Quickstart</h2>
+        <p>Works with Python 3.8+. Use a simulator or a ground station connection string compatible with your setup.</p>
+        <pre><code>python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install dronekit opencv-python numpy
+cd intuitive_shot_flight_algorithm
+python flight_controller.py --connect tcp:127.0.0.1:5762</code></pre>
+        <div class="notice">Adjust `start_wp`, `stop_wp`, and `throw` params in `flight_controller.py` to match your Mission Planner file before flight.</div>
+      </section>
+
+      <section>
+        <h2>Repository map</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Core mission code</h3>
+            <ul>
+              <li>`intuitive_shot_flight_algorithm/flight_controller.py`</li>
+              <li>`intuitive_shot_flight_algorithm/perception.py`</li>
+              <li>`intuitive_shot_flight_algorithm/mission_waypoints.txt`</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Detection experiments</h3>
+            <ul>
+              <li>`algorithms/anka_detect/team_detection_demo.py`</li>
+              <li>`algorithms/detect_cpu/canny_edge.py`</li>
+              <li>`algorithms/pixel_deviation/pixel_deviation.py`</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Assets</h3>
+            <ul>
+              <li>`assets/logo_team_anka.png`</li>
+              <li>`assets/mission_planner_screenshot.png`</li>
+              <li>`assets/team_photo.jpg`</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Docs & tools</h3>
+            <ul>
+              <li>`docs/BTU_ANKA_Report_2022.pdf`</li>
+              <li>`docs/PDR_Teknofest_2022_PDR.md`</li>
+              <li>`tools/organize_repo.py`</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Report and assets</h2>
+        <p>Use these references for presentations, research notes, or onboarding new contributors.</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3>Competition report (PDF)</h3>
+            <p>`docs/BTU_ANKA_Report_2022.pdf` summarizes the aircraft, mission profile, and test results.</p>
+            <a class="cta" href="docs/BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">Open report</a>
+          </div>
+          <div class="card">
+            <h3>Mission visuals</h3>
+            <p>Mission planner snapshots and diagrams help align planning with autonomous corrections in the air.</p>
+            <div class="notice">Files: `mission_planner_screenshot.png`, `mission_view_01.png`, `mission_view_02.png`, `mission_view_03.png`.</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+          <figure>
+            <img src="assets/mission_planner_screenshot.png" alt="Mission Planner screenshot">
+            <figcaption>Mission Planner route used during Teknofest prep.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/flight_test.png" alt="Flight test photo">
+            <figcaption>Flight test still from the fixed-wing platform.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/team_photo.jpg" alt="IEEE BTU ANKA team photo">
+            <figcaption>IEEE BTU ANKA team behind the mission-flight stack.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2>Stay in touch</h2>
+        <p>Follow the team or open an issue to collaborate.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="cta" href="https://www.instagram.com/ieeebtuanka/" target="_blank" rel="noopener">Instagram @ieeebtuanka</a>
+          <div class="chip">mission-flight - BTU ANKA UAV</div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
