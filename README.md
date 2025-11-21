@@ -146,19 +146,4 @@ Document block diagrams showing inputs, sensors, actuators, autopilot, mission m
 ### Component selection
 List and justify choices for motor, ESC, battery, servos, flight controller board, GPS module, telemetry radio, and structural materials. Include supplier part numbers, cost estimates, and any test results.
 
-## Appendices and next steps
-1) Add a mass table with measured/estimated values and compute take-off weight plus CG envelope.  
-2) Add electrical component datasheets and finalize the power budget and battery selection.  
-3) Add drawings/photos for the payload release mechanism.  
-4) Add a mission map and Mission Planner screenshot showing route and distance calculations.  
-5) Add flight test results and log extracts demonstrating speed and endurance targets.
 
-Requests for the team:
-- Provide the component list and masses used in the design.
-- Share motor/ESC specs and battery choice.
-- Supply images, CAD drawings, or Mission Planner route files (.waypoints) to embed in the report.
-
-If desired, I can:
-- Generate mass and power tables from a provided parts CSV or spreadsheet.
-- Link additional Mission Planner screenshots placed in `assets/`.
-- Create a simple block diagram (SVG/PNG) for inclusion in `assets/`.
