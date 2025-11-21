@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mission-Flight | IEEE BTU ANKA UAV Team</title>
+  <title>anka-uav-tekno2022 | IEEE BTU ANKA UAV Team</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inconsolata:wght@500;700&display=swap" rel="stylesheet">
@@ -312,7 +312,7 @@
       <div class="brand">
         <img src="assets/logo_team_anka.png" alt="BTU ANKA logo">
         <div>
-          <h1>mission-flight</h1>
+          <h1>anka-uav-tekno2022</h1>
           <div class="chip">IEEE BTU ANKA - Teknofest 2022</div>
         </div>
       </div>
@@ -339,8 +339,9 @@
             </div>
           </div>
           <div style="margin-top:16px; display:flex; gap:12px; flex-wrap: wrap;">
-            <a class="cta" href="docs/BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">Read competition report</a>
-            <div class="chip">Live waypoint updates - Color-based detection</div>
+            <a class="cta" href="https://yusufarbc.github.io/anka-uav-tekno2022/" target="_blank" rel="noopener">Open live page</a>
+            <a class="cta" href="BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">Read competition report</a>
+            <div class="chip">Live waypoint updates - Color-based detection - Mission Planner compatible</div>
           </div>
         </div>
         <div class="hero-visual">
@@ -368,6 +369,10 @@
             <h3>Algorithms lab</h3>
             <p>`algorithms/` houses standalone experiments (Canny, pixel deviation, demos) so detection ideas can be validated without touching flight-critical code.</p>
           </div>
+          <div class="card">
+            <h3>Ground station</h3>
+            <p>Mission Planner (ArduPilot) handles route upload, telemetry, and verifying in-flight waypoint edits. <a href="https://ardupilot.org/planner/" target="_blank" rel="noopener">Mission Planner docs</a>.</p>
+          </div>
         </div>
       </section>
 
@@ -380,6 +385,7 @@ pip install dronekit opencv-python numpy
 cd intuitive_shot_flight_algorithm
 python flight_controller.py --connect tcp:127.0.0.1:5762</code></pre>
         <div class="notice">Adjust `start_wp`, `stop_wp`, and `throw` params in `flight_controller.py` to match your Mission Planner file before flight.</div>
+        <div class="notice">Ground control: use <a href="https://ardupilot.org/planner/" target="_blank" rel="noopener">Mission Planner (ArduPilot)</a> or a compatible GCS for uploading plans and monitoring telemetry.</div>
       </section>
 
       <section>
@@ -412,9 +418,10 @@ python flight_controller.py --connect tcp:127.0.0.1:5762</code></pre>
           <div class="card">
             <h3>Docs & tools</h3>
             <ul>
-              <li>`docs/BTU_ANKA_Report_2022.pdf`</li>
-              <li>`docs/PDR_Teknofest_2022_PDR.md`</li>
-              <li>`tools/organize_repo.py`</li>
+              <li><a href="https://yusufarbc.github.io/anka-uav-tekno2022/" target="_blank" rel="noopener">Live page</a></li>
+              <li><a href="BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">BTU_ANKA_Report_2022.pdf</a></li>
+              <li><a href="PDR_Teknofest_2022_PDR.md" target="_blank" rel="noopener">PDR_Teknofest_2022_PDR.md</a></li>
+              <li><a href="https://ardupilot.org/planner/" target="_blank" rel="noopener">Mission Planner (ArduPilot)</a></li>
             </ul>
           </div>
         </div>
@@ -426,8 +433,8 @@ python flight_controller.py --connect tcp:127.0.0.1:5762</code></pre>
         <div class="grid grid-2">
           <div class="card">
             <h3>Competition report (PDF)</h3>
-            <p>`docs/BTU_ANKA_Report_2022.pdf` summarizes the aircraft, mission profile, and test results.</p>
-            <a class="cta" href="docs/BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">Open report</a>
+            <p>`BTU_ANKA_Report_2022.pdf` summarizes the aircraft, mission profile, and test results.</p>
+            <a class="cta" href="BTU_ANKA_Report_2022.pdf" target="_blank" rel="noopener">Open report</a>
           </div>
           <div class="card">
             <h3>Mission visuals</h3>
@@ -450,7 +457,7 @@ python flight_controller.py --connect tcp:127.0.0.1:5762</code></pre>
           </figure>
           <figure>
             <img src="assets/team_photo.jpg" alt="IEEE BTU ANKA team photo">
-            <figcaption>IEEE BTU ANKA team behind the mission-flight stack.</figcaption>
+            <figcaption>IEEE BTU ANKA team behind the anka-uav-tekno2022 stack.</figcaption>
           </figure>
         </div>
       </section>
@@ -460,7 +467,7 @@ python flight_controller.py --connect tcp:127.0.0.1:5762</code></pre>
         <p>Follow the team or open an issue to collaborate.</p>
         <div style="display:flex; gap:12px; flex-wrap:wrap;">
           <a class="cta" href="https://www.instagram.com/ieeebtuanka/" target="_blank" rel="noopener">Instagram @ieeebtuanka</a>
-          <div class="chip">mission-flight - BTU ANKA UAV</div>
+          <div class="chip">anka-uav-tekno2022 - BTU ANKA UAV</div>
         </div>
       </section>
     </main>
