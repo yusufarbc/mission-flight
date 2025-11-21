@@ -52,7 +52,6 @@ Pre-flight notes:
 ---
 
 # Preliminary Design Review (Teknofest 2022)
-Source: `PDR_Teknofest_2022_PDR.md`
 
 ## Team and roles
 - Team: IEEE BTU ANKA Fixed-Wing UAV Team.
