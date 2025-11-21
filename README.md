@@ -1,6 +1,8 @@
 # anka-uav-tekno2022
 
-Mission and flight software for the IEEE BTU ANKA fixed-wing UAV team at the Teknofest International UAV Competition 2022. The repository bundles the mission controller, perception helpers, detection experiments, visual assets, and design documentation that supported the team's flights.
+Mission and flight software for the IEEE BTU ANKA fixed-wing UAV team (Teknofest International UAV Competition 2022). This repo contains the mission controller, perception helpers, detection experiments, visual assets, and design documentation used during the competition.
+
+![Mission diagram showcasing route and target areas](assets/mission_diagram.png)
 
 ## Quick links
 - Live page: https://yusufarbc.github.io/anka-uav-tekno2022/
