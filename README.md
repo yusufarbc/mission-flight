@@ -9,7 +9,6 @@ Mission and flight software for the IEEE BTU ANKA fixed-wing UAV team (Teknofest
 - Project landing page (local): `index.html`
 - Mission Planner (ArduPilot): https://ardupilot.org/planner/
 - Competition report (PDF): `BTU_ANKA_Report_2022.pdf`
-- Preliminary Design Review source: `PDR_Teknofest_2022_PDR.md`
 
 ## Repository map
 - `intuitive_shot_flight_algorithm/` - Mission controller, perception helpers, waypoint files, and runtime log.
@@ -17,7 +16,6 @@ Mission and flight software for the IEEE BTU ANKA fixed-wing UAV team (Teknofest
 - `assets/` - Team visuals (logo, mission views, flight photos) used across docs and the landing page.
 - `index.html` - Project landing page showcasing the mission, team, and assets.
 - `BTU_ANKA_Report_2022.pdf` - Teknofest 2022 team report.
-- `PDR_Teknofest_2022_PDR.md` - Preliminary Design Review text (also embedded below).
 
 ## Getting started
 Works with Python 3.8+; connect to either a simulator or hardware via a DroneKit-compatible connection string.
@@ -49,7 +47,7 @@ Pre-flight notes:
 
 ## Assets and reports
 - Visuals: `assets/mission_diagram.png`, `assets/mission_planner_screenshot.png`, `assets/mission_view_01.png`, `assets/mission_view_02.png`, `assets/mission_view_03.png`, `assets/flight_test.png`, `assets/team_photo.jpg`, `assets/presentation_slides.png`, `assets/logo_team_anka.png`.
-- Reports: `BTU_ANKA_Report_2022.pdf` (competition report) and `PDR_Teknofest_2022_PDR.md` (full PDR text below).
+- Reports: `BTU_ANKA_Report_2022.pdf` (competition report).
 
 ---
 
